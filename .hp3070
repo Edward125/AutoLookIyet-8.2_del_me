@@ -1,0 +1,488 @@
+#
+#  HP3070 Defaults file
+#
+# Source: %M%
+#
+# Revision %I%
+#
+.RandomPlacement:       yes
+.ProgramAction:         nowindow
+.Experience:            expert
+.BackupLevel:           unnumbered
+.List:                  no
+.Term:                  hptermX11
+.LoginShell:            yes
+
+HandlerRecover.ProgramAction:    window
+HandlerRecover.UseBasicPosition: yes
+HandlerRecover.background:       black
+HandlerRecover.foreground:       white
+HandlerRecover.border:           red
+HandlerRecover.cursor:           yellow
+HandlerRecover.height:           26
+HandlerRecover.title:            EFS Recovery
+
+Dcomp.Debug:              no
+Mcomp.Debug:              no
+
+Wcomp.Verify:             yes
+
+Board.Command:            NewBoard
+Board.WindowWait:         never
+Board.Boardlist:          no
+Board.cursor:             maroon
+
+Tpg.Experience:           standard
+Mpa.Experience:           standard
+
+Ps.BackupLevel:           numbered
+Mpa.BackupLevel:          numbered
+Fxt.BackupLevel:          numbered
+Bpl.BackupLevel:          numbered
+# Plot files cannot be backed up.  Do not change the next line.
+Plotgen.BackupLevel:      none
+
+Mpa.OneBoardPerTestJetMux: off
+
+# Prior to revision 05.00p, the following lines determined if 75 Mil
+# or 50 Mil probes were used during test and fixture development.
+# They are now commented since the "usage" field of probe component
+# files determines how 75 Mil and 50 Mil probes are used.
+# See User-Modifiable Probes in the Data Formats (Fixture Files) manual
+# for more information.
+#Ps.75mil:      yes
+#Ps.50mil:      yes
+
+Verify.AutostartBeeps     4
+
+# Shell.ProgramAction:    overlay
+Shell.WindowWait:         onfail
+Shell.Height:             24
+Shell.Command:            sh -i
+Shell.LoginShell:         yes
+
+PrinterIs.Title:          Printer Is...
+PrinterIs.Height:         10
+
+ReportIs.Height:          10
+ReportIs.Title:           Report Is...
+
+Histo.Geometry:           =500x350+0+0
+
+DigitalDebug.Height:         20
+DigitalDebug.UserVectors:    no
+DigitalDebug.VerifyRef:      10
+DigitalDebug.ScreenFixed:    no
+DigitalDebug.List:           groups
+DigitalDebug.Mapping:        execution
+#DigitalDebug.Mapping:       definition
+DigitalDebug.Update:         yes
+DigitalDebug.Source:         yes
+DigitalDebug.DiagnoseFaultsExecutions: 50
+SerialDebug.Spacing:         8
+AnalogDebug.Moa:             rectangular
+Debug.Softkeys:              yes
+PushButtonDebug.BackupLevel: unnumbered
+
+# The following lines tell Test Consultant how much to look at when
+# determining which tests need regeneration.  The comprehensive
+# setting equates to the default behavior of Test Consultant in
+# releases prior to B200.
+
+TestConsultant.DependencyCheck: comprehensive
+#TestConsultant.DependencyCheck: comprehensive_clear
+#TestConsultant.DependencyCheck: limited
+#TestConsultant.DependencyCheck: limited_clear
+
+#.SCLogfile:             sclog
+
+Operator.Softkeys:      yes
+Operator.ForceWidgets:  yes
+Operator.Footswitch:    no
+Operator.Default:       standard
+Operator.ABH_Default:   abh_standard
+Operator.TM_Default:    tm_standard
+
+Standard.Boxes:         15
+Standard.X:             10
+Standard.Y:             4
+Standard.Columns:       15
+
+Standard.Label1:        start
+Standard.Label2:        yes
+Standard.Label3:        no
+Standard.Label4:        debug
+Standard.Label5:        unpower
+Standard.Label6:        testplan
+Standard.Label7:        re-save
+Standard.Label8:        board
+Standard.Label9:        fixture
+Standard.Label10:        faon
+Standard.Label11:       faoff
+Standard.Label12:       lock
+Standard.Label13:       unlock
+Standard.Label14:       stop
+Standard.Label15:       exit
+
+
+Standard.Command1:      CHAR_START
+Standard.Command2:      CHAR_YES
+Standard.Command3:      CHAR_NO
+Standard.Command4:      load board|debug board
+Standard.Command5:      unpower
+Standard.Command6:      get'testplan'
+Standard.Command7:      re-save
+Standard.Command8:      board consultant
+Standard.Command9:      fixture consultant
+Standard.Command10:     CHAR_FAON
+Standard.Command11:     CHAR_FAOFF
+Standard.Command12:     fixture lock
+Standard.Command13:     fixture unlock
+Standard.Command14:     CHAR_STOP
+Standard.Command15:     CHAR_EXIT
+
+
+
+ABH_Standard.Boxes:     8
+ABH_Standard.X:         10
+ABH_Standard.Y:         4
+ABH_Standard.Columns:   8
+
+ABH_Standard.Label1:    start
+ABH_Standard.Label2:    yes
+ABH_Standard.Label3:    no
+ABH_Standard.Label4:    programmonitor
+ABH_Standard.Label5:    .
+ABH_Standard.Label6:    .
+ABH_Standard.Label7:    stop
+ABH_Standard.Label8:    exit
+
+ABH_Standard.Command1:  CHAR_START
+ABH_Standard.Command2:  CHAR_YES
+ABH_Standard.Command3:  CHAR_NO
+ABH_Standard.Command4:  CHAR_PROGRAM_MONITOR_LOGIN
+ABH_Standard.Command5:  CHAR_NUL
+ABH_Standard.Command6:  CHAR_NUL
+ABH_Standard.Command7:  CHAR_STOP
+ABH_Standard.Command8:  CHAR_EXIT
+
+TM_Standard.Boxes:         10
+TM_Standard.X:             10
+TM_Standard.Y:             4
+TM_Standard.Columns:       10
+
+TM_Standard.Label1:        start
+TM_Standard.Label2:        yes
+TM_Standard.Label3:        no
+TM_Standard.Label4:        programmonitor
+TM_Standard.Label5:        .
+TM_Standard.Label6:        .
+TM_Standard.Label7:        stop
+TM_Standard.Label8:        exit
+TM_Standard.Label9:        testplan
+
+
+TM_Standard.Command1:      CHAR_START
+TM_Standard.Command2:      CHAR_YES
+TM_Standard.Command3:      CHAR_NO
+TM_Standard.Command4:      CHAR_PROGRAM_MONITOR_LOGIN
+TM_Standard.Command5:      CHAR_NUL
+TM_Standard.Command6:      CHAR_NUL
+TM_Standard.Command7:      CHAR_STOP
+TM_Standard.Command8:      CHAR_EXIT
+TM_Standard.Command9:      get"testplan"
+
+
+Question.Boxes:         10
+Question.X:             10
+Question.Y:             4
+Question.Columns:       8
+
+
+Question.Label1:        .
+Question.Label2:        yes
+Question.Label3:        no
+Question.Label4:        .
+Question.Label5:        .
+Question.Label6:        .
+Question.Label7:        stop
+Question.Label8:        .
+Question.Label9:        testplan
+
+
+Question.Command1:      CHAR_NUL
+Question.Command2:      CHAR_YES
+Question.Command3:      CHAR_NO
+Question.Command4:      CHAR_NUL
+Question.Command5:      CHAR_NUL
+Question.Command6:      CHAR_NUL
+Question.Command7:      CHAR_STOP
+Question.Command8:      CHAR_NUL
+Question.Command9:      CHAR_testplan
+
+
+TCMout.Boxes:           8
+TCMout.X:               10
+TCMout.Y:               4
+TCMout.Columns:         8
+
+TCMout.Label1:          start
+TCMout.Label2:          .
+TCMout.Label3:          .
+TCMout.Label4:          programmonitor
+TCMout.Label5:          .
+TCMout.Label6:          .
+TCMout.Label7:          .
+TCMout.Label8:          exit
+
+TCMout.Command1:        CHAR_START
+TCMout.Command2:        CHAR_NUL
+TCMout.Command3:        CHAR_NUL
+TCMout.Command4:        CHAR_PROGRAM_MONITOR_LOGIN
+TCMout.Command5:        CHAR_NUL
+TCMout.Command6:        CHAR_NUL
+TCMout.Command7:        CHAR_NUL
+TCMout.Command8:        CHAR_EXIT
+
+TCM.Boxes:              8
+TCM.X:                  10
+TCM.Y:                  4
+TCM.Columns:            8
+
+TCM.Label1:             runtestplan
+TCM.Label2:             fixturelock
+TCM.Label3:             fixtureunlock
+TCM.Label4:             testheadpoweron
+TCM.Label5:             .
+TCM.Label6:             .
+TCM.Label7:             .
+TCM.Label8:             quit
+
+TCM.Command1:           1
+TCM.Command2:           2
+TCM.Command3:           3
+TCM.Command4:           4
+TCM.Command5:           CHAR_NUL
+TCM.Command6:           CHAR_NUL
+TCM.Command7:           CHAR_NUL
+TCM.Command8:           8
+
+Autofile.Boxes:         8
+Autofile.X:             10
+Autofile.Y:             4
+Autofile.Columns:       8
+
+### Board Handler ###
+
+TCM_BHop.Boxes:         8
+TCM_BHop.X:             10
+TCM_BHop.Y:             4
+TCM_BHop.Columns:       8
+
+TCM_BHop.Label1:        runtestplan
+TCM_BHop.Label2:        .
+TCM_BHop.Label3:        .
+TCM_BHop.Label4:        changefixture
+TCM_BHop.Label5:        help
+TCM_BHop.Label6:        .
+TCM_BHop.Label7:        .
+TCM_BHop.Label8:        quit
+
+TCM_BHop.Command1:      5
+TCM_BHop.Command2:      CHAR_NUL
+TCM_BHop.Command3:      CHAR_NUL
+TCM_BHop.Command4:      4
+TCM_BHop.Command5:      1
+TCM_BHop.Command6:      CHAR_NUL
+TCM_BHop.Command7:      CHAR_NUL
+TCM_BHop.Command8:      8
+
+TCM_BHmain.Boxes:       8
+TCM_BHmain.X:          10
+TCM_BHmain.Y:          4
+TCM_BHmain.Columns:     8
+
+TCM_BHmain.Label1:      runtestplan
+TCM_BHmain.Label2:      setoptions
+TCM_BHmain.Label3:      systemstatus
+TCM_BHmain.Label4:      changefixture
+TCM_BHmain.Label5:      help
+TCM_BHmain.Label6:      handlerparams
+TCM_BHmain.Label7:      handlercomm
+TCM_BHmain.Label8:      quit
+
+TCM_BHmain.Command1:    5
+TCM_BHmain.Command2:    2
+TCM_BHmain.Command3:    3
+TCM_BHmain.Command4:    4
+TCM_BHmain.Command5:    1
+TCM_BHmain.Command6:    6
+TCM_BHmain.Command7:    7
+TCM_BHmain.Command8:    8
+
+TCM_BHoptions.Boxes:    8
+TCM_BHoptions.X:       10
+TCM_BHoptions.Y:       4
+TCM_BHoptions.Columns:  8
+
+TCM_BHoptions.Label1:   usingtesthead
+TCM_BHoptions.Label2:   usinghandler
+TCM_BHoptions.Label3:   usingsoftkeys
+TCM_BHoptions.Label4:   usingoperator
+TCM_BHoptions.Label5:   usingmonitor
+TCM_BHoptions.Label6:   .
+TCM_BHoptions.Label7:   .
+TCM_BHoptions.Label8:   mainmenu
+
+TCM_BHoptions.Command1: 1
+TCM_BHoptions.Command2: 2
+TCM_BHoptions.Command3: 3
+TCM_BHoptions.Command4: 4
+TCM_BHoptions.Command5: 5
+TCM_BHoptions.Command6: CHAR_NUL
+TCM_BHoptions.Command7: CHAR_NUL
+TCM_BHoptions.Command8: 14
+
+TCM_BHhand1.Boxes:      8
+TCM_BHhand1.X:         10
+TCM_BHhand1.Y:         4
+TCM_BHhand1.Columns:    8
+
+TCM_BHhand1.Label1:     presstotransfer
+TCM_BHhand1.Label2:     presstolongprobes
+TCM_BHhand1.Label3:     presstoallprobes
+TCM_BHhand1.Label4:     .
+TCM_BHhand1.Label5:     help
+TCM_BHhand1.Label6:     nextmenu
+TCM_BHhand1.Label7:     previousmenu
+TCM_BHhand1.Label8:     mainmenu
+
+TCM_BHhand1.Command1:   15
+TCM_BHhand1.Command2:   16
+TCM_BHhand1.Command3:   17
+TCM_BHhand1.Command4:   CHAR_NUL
+TCM_BHhand1.Command5:   11
+TCM_BHhand1.Command6:   12
+TCM_BHhand1.Command7:   13
+TCM_BHhand1.Command8:   14
+
+TCM_BHhand2.Boxes:      8
+TCM_BHhand2.X:         10
+TCM_BHhand2.Y:         4
+TCM_BHhand2.Columns:    8
+
+TCM_BHhand2.Label1:     adjust
+TCM_BHhand2.Label2:     boardin
+TCM_BHhand2.Label3:     boardoutentry
+TCM_BHhand2.Label4:     .
+TCM_BHhand2.Label5:     help
+TCM_BHhand2.Label6:     nextmenu
+TCM_BHhand2.Label7:     previousmenu
+TCM_BHhand2.Label8:     mainmenu
+
+TCM_BHhand2.Command1:   25
+TCM_BHhand2.Command2:   26
+TCM_BHhand2.Command3:   27
+TCM_BHhand2.Command4:   CHAR_NUL
+TCM_BHhand2.Command5:   21
+TCM_BHhand2.Command6:   22
+TCM_BHhand2.Command7:   23
+TCM_BHhand2.Command8:   24
+
+TCM_BHhand3.Boxes:      8
+TCM_BHhand3.X:         10
+TCM_BHhand3.Y:         4
+TCM_BHhand3.Columns:    8
+
+TCM_BHhand3.Label1:     railsin
+TCM_BHhand3.Label2:     railsout
+TCM_BHhand3.Label3:     railsoff
+TCM_BHhand3.Label4:     .
+TCM_BHhand3.Label5:     help
+TCM_BHhand3.Label6:     nextmenu
+TCM_BHhand3.Label7:     previousmenu
+TCM_BHhand3.Label8:     mainmenu
+
+TCM_BHhand3.Command1:   35
+TCM_BHhand3.Command2:   36
+TCM_BHhand3.Command3:   37
+TCM_BHhand3.Command4:   CHAR_NUL
+TCM_BHhand3.Command5:   31
+TCM_BHhand3.Command6:   32
+TCM_BHhand3.Command7:   33
+TCM_BHhand3.Command8:   34
+
+TCM_BHhand4.Boxes:      8
+TCM_BHhand4.X:         10
+TCM_BHhand4.Y:         4
+TCM_BHhand4.Columns:    8
+
+TCM_BHhand4.Label1:     selftest
+TCM_BHhand4.Label2:     fixturelock
+TCM_BHhand4.Label3:     fixtureunlock
+TCM_BHhand4.Label4:     .
+TCM_BHhand4.Label5:     help
+TCM_BHhand4.Label6:     nextmenu
+TCM_BHhand4.Label7:     previousmenu
+TCM_BHhand4.Label8:     mainmenu
+
+TCM_BHhand4.Command1:   47
+TCM_BHhand4.Command2:   45
+TCM_BHhand4.Command3:   46
+TCM_BHhand4.Command4:   CHAR_NUL
+TCM_BHhand4.Command5:   41
+TCM_BHhand4.Command6:   42
+TCM_BHhand4.Command7:   43
+TCM_BHhand4.Command8:   44
+
+# For compatibility with versions of testmain prior to A.03.00,
+# the following buttons allow users to restart or exit
+# from a stopped testplan. (These used to bring up a whole
+# set of nested 'debug' menus).
+
+EFSComm1.Boxes:         8
+EFSComm1.X:             10
+EFSComm1.Y:             4
+EFSComm1.Columns:       8
+
+EFSComm1.Label1:        start
+EFSComm1.Label2:        .
+EFSComm1.Label3:        .
+EFSComm1.Label4:        .
+EFSComm1.Label5:        .
+EFSComm1.Label6:        .
+EFSComm1.Label7:        .
+EFSComm1.Label8:        exit
+
+EFSComm1.Command1:      operator "ABH_Standard" | run
+EFSComm1.Command2:      CHAR_NUL
+EFSComm1.Command3:      CHAR_NUL
+EFSComm1.Command4:      CHAR_NUL
+EFSComm1.Command5:      CHAR_NUL
+EFSComm1.Command6:      CHAR_NUL
+EFSComm1.Command7:      CHAR_NUL
+EFSComm1.Command8:      CHAR_EXIT
+
+EFSComm4.Boxes:         8
+EFSComm4.X:             10
+EFSComm4.Y:             4
+EFSComm4.Columns:       8
+
+EFSComm4.Label1:        start
+EFSComm4.Label2:        .
+EFSComm4.Label3:        .
+EFSComm4.Label4:        .
+EFSComm4.Label5:        .
+EFSComm4.Label6:        .
+EFSComm4.Label7:        .
+EFSComm4.Label8:        exit
+
+EFSComm4.Command1:      operator "ABH_Standard" | run
+EFSComm4.Command2:      CHAR_NUL
+EFSComm4.Command3:      CHAR_NUL
+EFSComm4.Command4:      CHAR_NUL
+EFSComm4.Command5:      CHAR_NUL
+EFSComm4.Command6:      CHAR_NUL
+EFSComm4.Command7:      CHAR_NUL
+EFSComm4.Command8:      CHAR_EXIT
+
